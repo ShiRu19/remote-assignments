@@ -4,7 +4,7 @@ body {
 
 header {
     background-color:#CFDCEC;
-    height: 9rem;
+    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,10 +14,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0%;
 }
 
 .contentBox_container {
-    margin: 0.5rem 15%;
+    margin: 0% 15%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -31,7 +32,7 @@ header {
     align-items: center;
     flex: 1;
     flex-basis: 45%;
-    height: 150px;
+    height: 10vw;
     max-width: 1200px;
     margin: 1%;
 }
@@ -43,11 +44,11 @@ header {
 }
 
 .btn_callToAction_contain {
-    background-color: aqua;
+    background-color: #CFDCEC;
     height: 3%;
     width: 5%;
     flex-basis: 115px;
-    margin: 5px 0px 20px;
+    margin: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
