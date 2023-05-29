@@ -37,6 +37,15 @@ header {
     margin: 1%;
 }
 
+.contentBox[data-status="click"] {
+    background-color: blueviolet;
+}
+
+.contentBox[data-status="unclick"] {
+    background-color: #8B98A8;
+}
+
+
 .btn_callToAction_container {
     display: flex;
     flex-direction: row;
@@ -52,4 +61,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btn_callToAction_contain:hover, .btn_callToAction_contain:active{
+    background-color: brown;
 }
