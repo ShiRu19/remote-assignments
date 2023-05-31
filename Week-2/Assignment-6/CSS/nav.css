@@ -1,0 +1,25 @@
+.nav_container {
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.contain_left {
+    margin-right: auto;
+    margin-left: 2.3rem;
+    flex-basis: 10rem;
+}
+.contain_right {
+    flex-basis: 20rem;
+    margin-right: 2.3rem;
+}
+.nav_item_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+}
+a {
+    text-decoration:none;
+    color: black;
+}

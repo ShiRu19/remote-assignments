@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week 2 - Assignment 6</title>
+        <link href="CSS/nav.css" rel="stylesheet">
+        <link href="CSS/content.css" rel="stylesheet">
+        <script src="JS/contentBox.js"></script>
+        <script src="JS/assignment_6.js"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <nav class="nav_container">
+            <div class="contain_left">
+                <p><a href="#">Website Title</a> / <a href="#">Logo</a></p>
+            </div>
+            <div class="contain_right">
+                <ul class="nav_item_list">
+                    <li class="item">
+                        <a href="#">Item 1</a>
+                    </li>
+                    <li class="item">
+                        <a href="#">Item 2</a>
+                    </li>
+                    <li class="item">
+                        <a href="#">Item 3</a>
+                    </li>
+                    <li class="item">
+                        <a href="#">Item 4</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <header class="header_block">
+            <h1 class="header_content">Welcome Message</h1>
+        </header>
+        <main>
+            <section>
+                <div class="sectionTitle_container">
+                    <h2>Section Title</h2>
+                </div>
+                <div class="contentBoxContainer_container">
+                    <div class="contentBox_container">
+                        <div class="contentBox" id="contentBox_1" onclick="contentBoxClick(this)" data-status="unclick">
+                            <p>Content Box 1</p>
+                        </div>
+                        <div class="contentBox" id="contentBox_2" onclick="contentBoxClick(this)" data-status="unclick">
+                            <p>Content Box 2</p>
+                        </div>
+                        <div class="contentBox" id="contentBox_3" onclick="contentBoxClick(this)" data-status="unclick">
+                            <p>Content Box 3</p>
+                        </div>
+                        <div class="contentBox" id="contentBox_4" onclick="contentBoxClick(this)" data-status="unclick">
+                            <p>Content Box 4</p>    
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_callToAction_container">
+                    <div class="btn_callToAction_contain">
+                       <p>Call to Action</p>
+                    </div>
+                </div>
+                <div class="contentBoxContainer_container moreContentBoxes">
+                    <div class="contentBox_container">
+                        <div class="contentBox" id="contentBox_1" onclick="contentBoxClick(this)" data-status="unclick">
+                            <p>Content Box 5</p>
+                        </div>
+                        <div class="contentBox" id="contentBox_2" onclick="contentBoxClick(this)" data-status="unclick">
+                            <p>Content Box 6</p>
+                        </div>
+                        <div class="contentBox" id="contentBox_3" onclick="contentBoxClick(this)" data-status="unclick">
+                            <p>Content Box 7</p>
+                        </div>
+                        <div class="contentBox" id="contentBox_4" onclick="contentBoxClick(this)" data-status="unclick">
+                            <p>Content Box 8</p>    
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
