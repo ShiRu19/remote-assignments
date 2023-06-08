@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            var submitBtn = document.querySelector(".submitBtn");
+            var NInput = document.querySelector(".NInput");
+            var sumResult = document.querySelector("#sumResult");
+
+            submitBtn.addEventListener("click", () => {
+                sendAJAX();
+            });
+
+            NInput.addEventListener("keypress", (e) => {
+                if (e.key === "Enter") {
+                    submitBtn.click();
+                }
+            });
+
+            var url = "/data";
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        sumResult.textContent = `N 的總和： ${xhr.responseText}`;
+                    } else {
+                        alert(xhr.status.toString());
+                    }
+                }
+            };
+            function sendAJAX() {
+                xhr.open('GET', `${url}?number=${NInput.value}`);
+                xhr.send();
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 id="sumResult">N 的總和：</h1>
+    </header>
+    <div>
+        <input type="text" class="NInput" placeholder="Enter a positive integer" />
+        <input type="submit" class="submitBtn" value="Go"/>
+    </div>
+</body>
+</html>
