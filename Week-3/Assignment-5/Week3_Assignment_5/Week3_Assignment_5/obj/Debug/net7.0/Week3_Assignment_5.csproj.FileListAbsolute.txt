@@ -1,0 +1,15 @@
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\bin\Debug\net7.0\Week3_Assignment_5.exe
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\bin\Debug\net7.0\Week3_Assignment_5.deps.json
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\bin\Debug\net7.0\Week3_Assignment_5.runtimeconfig.json
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\bin\Debug\net7.0\Week3_Assignment_5.dll
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\bin\Debug\net7.0\Week3_Assignment_5.pdb
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\obj\Debug\net7.0\Week3_Assignment_5.csproj.AssemblyReference.cache
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\obj\Debug\net7.0\Week3_Assignment_5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\obj\Debug\net7.0\Week3_Assignment_5.AssemblyInfoInputs.cache
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\obj\Debug\net7.0\Week3_Assignment_5.AssemblyInfo.cs
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\obj\Debug\net7.0\Week3_Assignment_5.csproj.CoreCompileInputs.cache
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\obj\Debug\net7.0\Week3_Assignment_5.dll
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\obj\Debug\net7.0\refint\Week3_Assignment_5.dll
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\obj\Debug\net7.0\Week3_Assignment_5.pdb
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\obj\Debug\net7.0\Week3_Assignment_5.genruntimeconfig.cache
+C:\Users\User\Shiru\remote-assignments\Week-3\Assignment-5\Week3_Assignment_5\Week3_Assignment_5\obj\Debug\net7.0\ref\Week3_Assignment_5.dll
