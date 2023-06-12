@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\User\\Shiru\\remote-assignments\\Week-3\\Assignment-1\\Week3_Assignment_1\\Week3_Assignment_1\\wwwroot\\sum.html",
+      "PackagePath": "staticwebassets\\sum.html"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Week3_Assignment_1.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

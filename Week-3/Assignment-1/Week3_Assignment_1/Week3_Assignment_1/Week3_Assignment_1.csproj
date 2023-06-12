@@ -6,4 +6,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Views\TrackName\Index.cs" />
+    <Compile Remove="Views\TrackName\Index.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\TrackName\Index.cshtml" />
+  </ItemGroup>
+
 </Project>
