@@ -27,7 +27,7 @@ namespace Assignment_1.Controllers
             {
                 return RedirectToAction("member");
             }
-            TempData["SignInMsg"] = "帳號或密碼錯誤";
+            TempData["Msg"] = "帳號或密碼錯誤";
             return RedirectToAction("Index", "Home");
         }
 
@@ -39,24 +39,30 @@ namespace Assignment_1.Controllers
         [HttpPost]
         public async Task<IActionResult> SignUp(AddUserViewModel addUserRequest)
         {
-            bool emailExist = mvcDbContext.Users.Any(user => user.Email == addUserRequest.Email);
-
-            if(emailExist)
+            if(ModelState.IsValid)
             {
-                TempData["SignUpMsg"] = "帳號已存在";
-                return RedirectToAction("Index", "Home");
+                bool emailExist = mvcDbContext.Users.Any(user => user.Email == addUserRequest.Email);
+
+                if(emailExist)
+                {
+                    TempData["Msg"] = "帳號已存在";
+                    return RedirectToAction("Index", "Home");
+                }
+
+                var user = new User()
+                {
+                    Id = Guid.NewGuid(),
+                    Email = addUserRequest.Email,
+                    Password = addUserRequest.Password
+                };
+
+                await mvcDbContext.Users.AddAsync(user);
+                await mvcDbContext.SaveChangesAsync();
+
+                return RedirectToAction("Member");
             }
-
-            var user = new User()
-            {
-                Id = Guid.NewGuid(),
-                Email = addUserRequest.Email,
-                Password = addUserRequest.Password
-            };
-
-            await mvcDbContext.Users.AddAsync(user);
-            await mvcDbContext.SaveChangesAsync();
-            return RedirectToAction("Member");
+            TempData["Msg"] = "註冊資料有誤";
+            return RedirectToAction("Index", "Home");
         }
     }
 }

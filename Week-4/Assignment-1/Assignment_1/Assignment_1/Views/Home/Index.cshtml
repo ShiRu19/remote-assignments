@@ -1,6 +1,7 @@
 ﻿@model Assignment_1.Models.AddUserViewModel
 @{
     ViewBag.Title = "User Sign Up and Login";
+    TempData["SignInOrSignUp"] = "SignUp";
     //ViewBag.SignInError = "none";
 }
 
@@ -35,6 +36,9 @@
                     <label for="signup" class="slide signup">Signup</label>
                     <div class="slider-tab"></div>
                 </div>
+                <div>
+                    <span style="color:red">@TempData["Msg"]</span>
+                </div>
                 <div class="form-inner">
                     @using (Html.BeginForm("SignIn", "User", FormMethod.Post, new { @class = "login" }))
                     {
@@ -43,9 +47,6 @@
                         </div>
                         <div class="field">
                             <input type="password" placeholder="Password" asp-for="Password" required>
-                        </div>
-                        <div>
-                            <span style="color:red">@TempData["SignInMsg"]</span>
                         </div>
                         <div class="field btn">
                             <div class="btn-layer"></div>
@@ -64,11 +65,8 @@
                         <div class="field">
                             <input type="password" placeholder="Password" asp-for="Password" required>
                         </div>
-                        @*<div class="field">
+                        <div class="field">
                             <input type="password" placeholder="Confirm password" asp-for="ConfirmPassword" required>
-                        </div>*@
-                        <div>
-                            <span style="color:red">@TempData["SignUpMsg"]</span>
                         </div>
                         <div class="field btn">
                             <div class="btn-layer"></div>
@@ -80,23 +78,25 @@
         </div>
     </div>
     <script>
-        const loginText = document.querySelector(".title-text .login");
-        const loginForm = document.querySelector("form.login");
-        const loginBtn = document.querySelector("label.login");
-        const signupBtn = document.querySelector("label.signup");
-        const signupLink = document.querySelector("form .signup-link a");
-        signupBtn.onclick = (()=>{
-          loginForm.style.marginLeft = "-50%";
-          loginText.style.marginLeft = "-50%";
-        });
-        loginBtn.onclick = (()=>{
-          loginForm.style.marginLeft = "0%";
-          loginText.style.marginLeft = "0%";
-        });
-        signupLink.onclick = (()=>{
-          signupBtn.click();
-          return false;
-        });
+        window.onload = function() {
+            const loginText = document.querySelector(".title-text .login");
+            const loginForm = document.querySelector("form.login");
+            const loginBtn = document.querySelector("label.login");
+            const signupBtn = document.querySelector("label.signup");
+            const signupLink = document.querySelector("form .signup-link a");
+            signupBtn.onclick = (()=>{
+              loginForm.style.marginLeft = "-50%";
+              loginText.style.marginLeft = "-50%";
+            });
+            loginBtn.onclick = (()=>{
+              loginForm.style.marginLeft = "0%";
+              loginText.style.marginLeft = "0%";
+            });
+            signupLink.onclick = (()=>{
+              signupBtn.click();
+              return false;
+            });
+        }
     </script>
 </body>
 </html>
