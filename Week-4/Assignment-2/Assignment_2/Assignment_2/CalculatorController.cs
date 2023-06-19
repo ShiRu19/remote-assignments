@@ -8,29 +8,26 @@ namespace Assignment_2
 {
     internal class CalculatorController
     {
-        private ICalculator _calculator;
-        private string _calculatorType;
+        private readonly ICalculator ICalculator;
+        private readonly string CalculatorType;
 
-        public CalculatorController()
+        public CalculatorController(ICalculator calculator, string calculatorType)
         {
-            _calculator = new AdvancedCalculator();
-            //_calculator = new SimpleCalculator();
-            _calculatorType = "Add";
-            //_calculatorType = "Subtract";
+            ICalculator = calculator;
+            CalculatorType = calculatorType;
         }
 
         public int Calculate(int a, int b)
         {
             int result = 0;
-            if(_calculatorType == "Add")
+            if(CalculatorType == "Add")
             {
-                result = _calculator.Add(a, b);
+                result = ICalculator.Add(a, b);
             }
-            else if(_calculatorType == "Subtract")
+            else if(CalculatorType == "Subtract")
             {
-                result = _calculator.Subtract(a, b);
+                result = ICalculator.Subtract(a, b);
             }
-            Console.WriteLine(result);
             return result;
         }
     }
