@@ -27,6 +27,7 @@ namespace Assignment_1.Controllers
             {
                 return RedirectToAction("member");
             }
+            TempData["SignInMsg"] = "帳號或密碼錯誤";
             return RedirectToAction("Index", "Home");
         }
 
@@ -42,7 +43,7 @@ namespace Assignment_1.Controllers
 
             if(emailExist)
             {
-                //ViewBag.SignInError = "block";
+                TempData["SignUpMsg"] = "帳號已存在";
                 return RedirectToAction("Index", "Home");
             }
 

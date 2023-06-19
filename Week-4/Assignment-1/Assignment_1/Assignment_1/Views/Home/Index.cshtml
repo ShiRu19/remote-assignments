@@ -44,9 +44,9 @@
                         <div class="field">
                             <input type="password" placeholder="Password" asp-for="Password" required>
                         </div>
-                        @*<div class="unsuccessMsg" style="display: @ViewBag.SignInError;">
-                            <p>帳號或密碼輸入錯誤，請重新輸入</p>
-                        </div>*@
+                        <div>
+                            <span style="color:red">@TempData["SignInMsg"]</span>
+                        </div>
                         <div class="field btn">
                             <div class="btn-layer"></div>
                             <input type="submit" value="Login">
@@ -67,9 +67,9 @@
                         @*<div class="field">
                             <input type="password" placeholder="Confirm password" asp-for="ConfirmPassword" required>
                         </div>*@
-                        @*<div class="unsuccessMsg" style="display: none;">
-                            <p>帳號已存在，請重新輸入</p>
-                        </div>*@
+                        <div>
+                            <span style="color:red">@TempData["SignUpMsg"]</span>
+                        </div>
                         <div class="field btn">
                             <div class="btn-layer"></div>
                             <input type="submit" value="Signup">
