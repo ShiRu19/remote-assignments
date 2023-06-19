@@ -19,9 +19,11 @@ namespace Assignment_1.Controllers
         }
 
         [HttpPost]
-        public IActionResult SignIn()
+        public IActionResult SignIn(AddUserViewModel addUserViewModel)
         {
-            if (true)
+            var user = new User { Email = addUserViewModel.Email, Password = addUserViewModel.Password };
+            bool isUserExist = mvcDbContext.Users.Any(user => user.Email == addUserViewModel.Email && user.Password == addUserViewModel.Password);
+            if (isUserExist)
             {
                 return RedirectToAction("member");
             }
@@ -32,16 +34,6 @@ namespace Assignment_1.Controllers
         {
             return View();
         }
-
-        //[HttpPost]
-        //public IActionResult SignUp()
-        //{
-        //    if (true)
-        //    {
-        //        return RedirectToAction("member");
-        //    }
-        //    return RedirectToAction("Index", "Home");
-        //}
 
         [HttpPost]
         public async Task<IActionResult> SignUp(AddUserViewModel addUserRequest)
