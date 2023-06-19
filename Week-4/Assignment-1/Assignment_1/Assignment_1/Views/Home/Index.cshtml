@@ -1,8 +1,102 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model Assignment_1.Models.AddUserViewModel
+@{
+    ViewBag.Title = "User Sign Up and Login";
+    //ViewBag.SignInError = "none";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/signInAndSignUp.css">
+    <link rel="stylesheet" href="~/css/site.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="wrapper_container">
+        <div class="wrapper">
+            <div class="title-text">
+                <div class="title login">
+                    Login Form
+                </div>
+                <div class="title signup">
+                    Signup Form
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="slide-controls">
+                    @*@Html.RadioButtonFor(model => model.CheckType, "A", new { @id = "login", @name = "slide"} )
+                    @Html.Label("login", "login");*@
+                    <input type="radio" name="slide" id="login" checked>
+                    <input type="radio" name="slide" id="signup">
+                    <label for="login" class="slide login">Login</label>
+                    <label for="signup" class="slide signup">Signup</label>
+                    <div class="slider-tab"></div>
+                </div>
+                <div class="form-inner">
+                    @using (Html.BeginForm("SignIn", "User", FormMethod.Post, new { @class = "login" }))
+                    {
+                        <div class="field">
+                            <input type="email" placeholder="Email Address" asp-for="Email" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="Password" asp-for="Password" required>
+                        </div>
+                        @*<div class="unsuccessMsg" style="display: @ViewBag.SignInError;">
+                            <p>帳號或密碼輸入錯誤，請重新輸入</p>
+                        </div>*@
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Login">
+                        </div>
+                        <div class="signup-link">
+                            Not a member? <a href="">Signup now</a>
+                        </div>
+                    }
+
+                    @using (Html.BeginForm("SignUp", "User", FormMethod.Post, new { @class = "singup" }))
+                    {
+                        <div class="field">
+                            <input type="text" placeholder="Email Address" asp-for="Email" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="Password" asp-for="Password" required>
+                        </div>
+                        @*<div class="field">
+                            <input type="password" placeholder="Confirm password" asp-for="ConfirmPassword" required>
+                        </div>*@
+                        @*<div class="unsuccessMsg" style="display: none;">
+                            <p>帳號已存在，請重新輸入</p>
+                        </div>*@
+                        <div class="field btn">
+                            <div class="btn-layer"></div>
+                            <input type="submit" value="Signup">
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const loginText = document.querySelector(".title-text .login");
+        const loginForm = document.querySelector("form.login");
+        const loginBtn = document.querySelector("label.login");
+        const signupBtn = document.querySelector("label.signup");
+        const signupLink = document.querySelector("form .signup-link a");
+        signupBtn.onclick = (()=>{
+          loginForm.style.marginLeft = "-50%";
+          loginText.style.marginLeft = "-50%";
+        });
+        loginBtn.onclick = (()=>{
+          loginForm.style.marginLeft = "0%";
+          loginText.style.marginLeft = "0%";
+        });
+        signupLink.onclick = (()=>{
+          signupBtn.click();
+          return false;
+        });
+    </script>
+</body>
+</html>

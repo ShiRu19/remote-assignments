@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZQmlWJVFBxHFi01Dz/32ViaETVjh/f1QLJsZ5jamwI0=",
+  "Hash": "ovcwdX/BYDspaPDG4OUxR3s0UuUcx1fYfVryRDy7CQk=",
   "Source": "Assignment_1",
   "BasePath": "_content/Assignment_1",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\User\\Shiru\\remote-assignments\\Week-4\\Assignment-1\\Assignment_1\\Assignment_1\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Assignment_1.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Shiru\\remote-assignments\\Week-4\\Assignment-1\\Assignment_1\\Assignment_1\\wwwroot\\css\\signInAndSignUp.css",
+      "SourceId": "Assignment_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Shiru\\remote-assignments\\Week-4\\Assignment-1\\Assignment_1\\Assignment_1\\wwwroot\\",
+      "BasePath": "_content/Assignment_1",
+      "RelativePath": "css/signInAndSignUp.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\signInAndSignUp.css"
     },
     {
       "Identity": "C:\\Users\\User\\Shiru\\remote-assignments\\Week-4\\Assignment-1\\Assignment_1\\Assignment_1\\wwwroot\\css\\site.css",
